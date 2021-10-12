@@ -59,7 +59,7 @@ class HttpSniffer:
             # On récupère la méthode
             method = packet[HTTPRequest].Method
 
-            # on formatte les variables et les affiches en couleur avec colorama
+            # on formate les variables et les affiches en couleur avec colorama
             print(f"\n{GREEN}[+] {ip.decode()} Requested {url} with {method.decode()}{RESET}")
 
             """
