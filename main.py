@@ -16,9 +16,7 @@ __status__ = "Production"
 init()
 
 """
-
 On définis des couleurs afin de faciliter l'affichage (cf. https://pypi.org/project/colorama/)
-
 """
 
 GREEN = Fore.GREEN
