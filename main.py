@@ -59,15 +59,15 @@ class HttpSniffer:
             # On récupère la méthode
             method = packet[HTTPRequest].Method
 
-            # on formate les variables et les affiches en couleur avec colorama
-            print(f"\n{GREEN}[+] {ip.decode()} Requested {url} with {method.decode()}{RESET}")
+            # on formatte les variables et les affiches en couleur avec colorama
+            print(f"\n{GREEN}[+] {ip} Requested {url} with {method.decode()}{RESET}")
 
             """
             On ajoute une condition pour savoir si des informations ont été transmises durant la requête
             Si oui on charge les données et on les affiches
             """
-
-            if packet.haslayer(Raw) and method == "POST":
+            
+            if packet.haslayer(Raw) and method.decode() == "POST":
                 print(f"\n{RED}[*] Some useful Raw data: {packet[Raw].load}{RESET}")
 
 
