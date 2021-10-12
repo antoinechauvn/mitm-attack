@@ -64,7 +64,7 @@ class HttpSniffer:
 
             """
             On ajoute une condition pour savoir si des informations ont été transmises durant la requête
-            Si oui on charge les données et on les affiches
+            Si oui on charge les données et ont les affiches
             """
             
             if packet.haslayer(Raw) and method.decode() == "POST":
